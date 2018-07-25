@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E3880A22108EC5100B270D1 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3880A12108EC5100B270D1 /* game.swift */; };
 		7EE0A6722108E835004D92CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0A6712108E835004D92CF /* AppDelegate.swift */; };
 		7EE0A6742108E835004D92CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0A6732108E835004D92CF /* ViewController.swift */; };
 		7EE0A6772108E835004D92CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE0A6752108E835004D92CF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E3880A12108EC5100B270D1 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		7EE0A66E2108E835004D92CF /* intersteam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = intersteam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE0A6712108E835004D92CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE0A6732108E835004D92CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E3880A02108EB4700B270D1 /* story boards */ = {
+			isa = PBXGroup;
+			children = (
+				7EE0A6752108E835004D92CF /* Main.storyboard */,
+				7EE0A67A2108E838004D92CF /* LaunchScreen.storyboard */,
+			);
+			path = "story boards";
+			sourceTree = "<group>";
+		};
 		7EE0A6652108E835004D92CF = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +65,22 @@
 		7EE0A6702108E835004D92CF /* intersteam */ = {
 			isa = PBXGroup;
 			children = (
+				7E3880A02108EB4700B270D1 /* story boards */,
+				7EE0A6832108EB06004D92CF /* view Controllers */,
 				7EE0A6712108E835004D92CF /* AppDelegate.swift */,
-				7EE0A6732108E835004D92CF /* ViewController.swift */,
-				7EE0A6752108E835004D92CF /* Main.storyboard */,
+				7E3880A12108EC5100B270D1 /* game.swift */,
 				7EE0A6782108E838004D92CF /* Assets.xcassets */,
-				7EE0A67A2108E838004D92CF /* LaunchScreen.storyboard */,
 				7EE0A67D2108E838004D92CF /* Info.plist */,
 			);
 			path = intersteam;
+			sourceTree = "<group>";
+		};
+		7EE0A6832108EB06004D92CF /* view Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EE0A6732108E835004D92CF /* ViewController.swift */,
+			);
+			path = "view Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E3880A22108EC5100B270D1 /* game.swift in Sources */,
 				7EE0A6742108E835004D92CF /* ViewController.swift in Sources */,
 				7EE0A6722108E835004D92CF /* AppDelegate.swift in Sources */,
 			);
