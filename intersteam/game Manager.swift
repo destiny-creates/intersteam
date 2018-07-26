@@ -22,7 +22,7 @@ class GameManager {
         
     }
     private var games: [Game] = []
-
+    
     func addGame(game: Game) {
         games.append(game)
     }
@@ -32,6 +32,20 @@ class GameManager {
     func getGame(at index: Int) -> Game {
         return games[index]
     }
+    
+    func removeGame(at index: Int) {
+        games.remove(at: index)
+        
+    }
+    func checkGameInOrOut(at index: Int) {
+        let game = games[index]
+        game.availability = !game.availability
+    }
+    
+    
+    
+    
+    
 }
 
 
