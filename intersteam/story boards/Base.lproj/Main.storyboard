@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,11 +14,73 @@
         <!--Game Library-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="intersteam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="gameListViewController" customModule="intersteam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nhe-M7-C0i">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameTableViewCell" rowHeight="90" id="Mlc-Tf-Ot5" customClass="gameTableViewCell" customModule="intersteam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mlc-Tf-Ot5" id="8jv-Lt-W4R">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnO-B5-hBI">
+                                                    <rect key="frame" x="15" y="11" width="87.5" height="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="availability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlE-Zk-LGu">
+                                                    <rect key="frame" x="240" y="29" width="120" height="20"/>
+                                                    <color key="backgroundColor" red="0.31922710054247116" green="1" blue="0.21980795707229628" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="Jvj-sc-P1h"/>
+                                                        <constraint firstAttribute="height" constant="30" id="u0l-Sc-3xt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Game genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVf-JP-dWQ">
+                                                    <rect key="frame" x="15" y="39" width="89" height="20"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bVf-JP-dWQ" firstAttribute="top" secondItem="LnO-B5-hBI" secondAttribute="bottom" constant="8" id="NOh-mU-4sV"/>
+                                                <constraint firstItem="LnO-B5-hBI" firstAttribute="leading" secondItem="8jv-Lt-W4R" secondAttribute="leadingMargin" id="aaM-zi-cB7"/>
+                                                <constraint firstItem="bVf-JP-dWQ" firstAttribute="leading" secondItem="8jv-Lt-W4R" secondAttribute="leadingMargin" id="iSj-BP-Cdh"/>
+                                                <constraint firstItem="tlE-Zk-LGu" firstAttribute="trailing" secondItem="8jv-Lt-W4R" secondAttribute="trailingMargin" id="zJb-zo-ezE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="availabilityLabel" destination="tlE-Zk-LGu" id="8zq-bo-KBg"/>
+                                            <outlet property="gameGenreLabel" destination="bVf-JP-dWQ" id="4FB-QP-nfs"/>
+                                            <outlet property="gameTitleLabel" destination="LnO-B5-hBI" id="Upc-Zw-8NJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="w5x-0g-xip"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bFO-oS-O0f"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nhe-M7-C0i" secondAttribute="trailing" id="9zE-aL-7F7"/>
+                            <constraint firstItem="Nhe-M7-C0i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z7B-lK-t6G"/>
+                            <constraint firstItem="Nhe-M7-C0i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h44-YF-BUB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nhe-M7-C0i" secondAttribute="bottom" id="yeW-C5-k4d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Game Library" id="t59-Jv-pFu"/>
