@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E3880A22108EC5100B270D1 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3880A12108EC5100B270D1 /* game.swift */; };
+		7E3880C2210A1E7100B270D1 /* game Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3880C1210A1E7100B270D1 /* game Manager.swift */; };
 		7EE0A6722108E835004D92CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0A6712108E835004D92CF /* AppDelegate.swift */; };
 		7EE0A6742108E835004D92CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0A6732108E835004D92CF /* ViewController.swift */; };
 		7EE0A6772108E835004D92CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE0A6752108E835004D92CF /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		7E3880A12108EC5100B270D1 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
+		7E3880C1210A1E7100B270D1 /* game Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "game Manager.swift"; sourceTree = "<group>"; };
 		7EE0A66E2108E835004D92CF /* intersteam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = intersteam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE0A6712108E835004D92CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE0A6732108E835004D92CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				7E3880A12108EC5100B270D1 /* game.swift */,
 				7EE0A6782108E838004D92CF /* Assets.xcassets */,
 				7EE0A67D2108E838004D92CF /* Info.plist */,
+				7E3880C1210A1E7100B270D1 /* game Manager.swift */,
 			);
 			path = intersteam;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				7E3880A22108EC5100B270D1 /* game.swift in Sources */,
 				7EE0A6742108E835004D92CF /* ViewController.swift in Sources */,
+				7E3880C2210A1E7100B270D1 /* game Manager.swift in Sources */,
 				7EE0A6722108E835004D92CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

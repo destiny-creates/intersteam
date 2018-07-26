@@ -14,12 +14,12 @@ class Game {
     var availability: Bool = true
     var dueDate: Date!
     
-    init(title: String, genre: String)
+    init(title: String, genre: String) {
         self.title = title
         self.genre = genre
     }
-}
 
+}
 
 
 
