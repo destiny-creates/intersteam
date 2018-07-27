@@ -9,6 +9,13 @@
 import UIKit
 
 class gameListViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var tableView: UITableView!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GameManager.sharedInstance.getGameCount()
     }
@@ -64,6 +71,9 @@ class gameListViewController : UIViewController, UITableViewDataSource, UITableV
     struct BackgroundColors {
         static let checkedInGreen = UIColor(hex: "2ECC71")
         static let checkedOutOrange = UIColor(hex: "F5AB35")
+    }
+    @IBAction func unwindToGameLibrary(_ segue: UIStoryboardSegue) {
+        
     }
     
 }
