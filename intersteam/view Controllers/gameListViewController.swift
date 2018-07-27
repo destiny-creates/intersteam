@@ -37,7 +37,18 @@ class gameListViewController : UIViewController, UITableViewDataSource, UITableV
     
         }
         
-        return [deleteAction]
+        let game = GameManager.sharedInstance.getGame(at: indexPath.row)
+        let title = game.availability ? "Check out" : "Check in"
+        
+        let checkOutOrInAction = UITableViewRowAction(style: .normal, title: title) { (_, _) in
+            GameManager.sharedInstance.checkGameInOrOut(at: indexPath.row)
+            tableView.reloadData()
+        }
+        
+        
+        
+        
+        return [deleteAction, checkOutOrInAction]
     }
     
     override func viewDidLoad() {
